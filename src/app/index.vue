@@ -1,14 +1,13 @@
-<template>
-	<div class="app">
-		<Routing />
-	</div>
-</template>
-
-<script setup>
-  import { Routing } from '@pages/index';
-  console.log(Routing);
+<script setup lang="ts">
+  import {Routing} from 'pages';
 </script>
 
+<template>
+  <div class="app">
+    <Routing />
+  </div>
+</template>
+
 <style>
-	@import "./index.scss";
+@import "./index.scss";
 </style>

@@ -1,36 +1,27 @@
 {
-	"compilerOptions": {
-		"allowJs": true,
-		"baseUrl": ".",
-		"paths": {
-			"@shared/*": [
-				"src/shared/*"
-			],
-			"@entities*": [
-				"src/entities*"
-			],
-			"@features/*": [
-				"src/features/*"
-			],
-			"@widgets/*": [
-				"src/widgets/*"
-			],
-			"@images/*": [
-				"public/images/*"
-			],
-			"@data/*": [
-				"src/data/*"
-			],
-			"@pages/*": [
-				"src/pages/*"
-			],
-			"@processes/*": [
-				"src/processes/*"
-			],
-			"@app/*": [
-				"src/app/*"
-			]
-		},
-		"jsx": "preserve"
-	}
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "src"
+  ]
 }

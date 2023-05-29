@@ -1,18 +1,4 @@
-@import "./fonts.css";
-@import 'tailwindcss/base';
-@import 'swiper/css';
-@import 'swiper/css/effect-fade';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
-@import "./global.css";
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-@layer base {
-	.no-scrollbar {
-		scrollbar-width: none;
-		&::-webkit-scrollbar {
-			@apply hidden;
-		}
-	}
-}
+@import 'ant-design-vue/dist/antd.css';
+@import "./normalize.scss";
+@import "./normalize-antd.scss";
+@import "./vars.scss";
