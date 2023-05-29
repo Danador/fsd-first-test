@@ -1,0 +1,14 @@
+[
+	{
+		"title": "Сотовый поликарбонат IRROX толщина 4 мм, плотность 0,47 кг/кв.м., прозрачный",
+		"art": "5500 EmpreBorrex",
+		"url": "#",
+		"depth": "4 мм",
+		"size": "2,1х12м",
+		"protection": "35-40 мк",
+		"productClass": "Стандарт",
+		"colorsName": "Бронза серая",
+		"images": ["/images/borrex.png", "/images/material/material.png", "/images/material/material-2.png", "/images/material/material-3.png"],
+		"colors": ["#27AE60", "#000000", "#F2994A", "#5A3B1E", "#ffffff", "#30D5C7", "#9B51E0"]
+	}
+]
