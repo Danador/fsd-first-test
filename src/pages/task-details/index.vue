@@ -36,11 +36,11 @@ const isDetailsLoading = computed(() => store.state[taskModel.NAMESPACE].isDetai
         </template>
       </Result>
       <TaskCard v-else
-                :data="task"
-                size="default"
-                :loading="isDetailsLoading"
-                :class="styles.card"
-                :bodyStyle="{height: 400}"
+        :data="task"
+        size="default"
+        :loading="isDetailsLoading"
+        :class="styles.card"
+        :bodyStyle="{height: 400}"
       >
         <template #actions>
           <ToggleTask :taskId="taskId" :withStatus="true" />

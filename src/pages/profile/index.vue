@@ -11,12 +11,15 @@
                     <span class="task_res_value">{{ item.value }}</span>
                 </li>
             </ul>
-            <a href="/tasks" class="complete_task">К задачам</a>
+            <RouterLink to="/tasks">
+                <button class="complete_task">К задачам</button>
+            </RouterLink>
         </LayoutContent>
     </Layout>
 </template>
-<script setup>
+<script setup lang="ts">
     import { Layout, LayoutContent } from 'ant-design-vue';
+    import {RouterLink} from 'vue-router';
     const list = [
         {
             title: 'Выполнено задач',

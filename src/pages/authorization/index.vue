@@ -2,20 +2,28 @@
     <Layout class="root">
         <LayoutContent class="content">
             <form @submit.prevent class="form">
-                <input v-model="formData.login" placeholder="Логин" type="text">
-                <input v-model="formData.password" placeholder="Пароль" type="password">
-                {{ checkData }}
-                <a 
-                    href="/profile" 
-                    class="auth_btn"
-                    :class="checkData ? '' : 'disabled'"
-                >Авторизоваться</a>
+                <input 
+                    v-model="formData.login" 
+                    placeholder="Логин" 
+                    type="text">
+                <input 
+                    v-model="formData.password" 
+                    placeholder="Пароль" 
+                    type="password"
+                >
+                <RouterLink to="/profile">
+                    <button 
+                        class="auth_btn"
+                        :class="checkData ? '' : 'disabled'"
+                    >Авторизоваться</button>
+                </RouterLink>
             </form>
         </LayoutContent>
     </Layout>
 </template>
 <script setup lang="ts">
-    import { computed, reactive, watch } from 'vue';
+    import {RouterLink} from 'vue-router';
+    import { computed, reactive } from 'vue';
     import { Layout, LayoutContent } from 'ant-design-vue';
     const test = {
         login: '1111',
