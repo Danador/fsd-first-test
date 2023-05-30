@@ -83,11 +83,11 @@
 </template>
 
 <script setup>
-	import Icon from "@components/Icon/Icon.vue";
-	import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.vue";
-	import Form from '@components/Form/Form.vue'
-	import Container from "@components/Container/Container.vue";
-	import Heading from "@components/Heading/Heading.vue";
+	import Icon from "shared/ui/Icon/Icon.vue";
+	import Breadcrumbs from "shared/ui/Breadcrumbs/Breadcrumbs.vue";
+	import Form from 'shared/ui/Form/Form.vue'
+	import Container from 'shared/ui/Container/Container.vue';
+	import Heading from "shared/ui/Heading/Heading.vue";
 
 	const props = defineProps({
 		list: { type: Object, default: () => {} },

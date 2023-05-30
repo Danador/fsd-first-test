@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-	import Icon from "@components/Icon/Icon.vue"
+	import Icon from "shared/ui/Icon/Icon.vue"
 	import { ref } from 'vue'
 	const props = defineProps({
 		pages: { type: Array, default: () => [] }

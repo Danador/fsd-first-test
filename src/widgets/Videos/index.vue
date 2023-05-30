@@ -79,15 +79,15 @@
 </template>
 
 <script setup>
-	import Icon from '@components/Icon/Icon.vue'
-	import Modal from '@components/Modal/views/Modal.vue'
+	import Icon from 'shared/ui/Icon/Icon.vue'
+	import Modal from 'shared/ui/Modal/views/Modal.vue'
 	import PreviewVideo from '@widgets/Videos/components/PreviewVideo.vue'
 	import Video from '@widgets/Videos/components/Video.vue'
 	import { ref } from 'vue'
 	import { Swiper, SwiperSlide } from 'swiper/vue';
 	import { Navigation } from 'swiper';
 	import { useStore } from '@nanostores/vue';
-	import { open } from '@components/Modal/store/Modal'
+	import { open } from 'shared/ui/Modal/store/Modal'
 	import useMedia from '@tools/media'
 
 	const props  = defineProps({

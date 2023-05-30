@@ -91,11 +91,11 @@
 	import { Pagination, Navigation, Autoplay } from "swiper";
 	import { Swiper, SwiperSlide } from "swiper/vue";
 	import { ref, onMounted } from 'vue'
-	import Button from "@components/Button/Button.vue";
-	import Icon from "@components/Icon/Icon.vue"
-	import Modal from "@components/Modal/views/Modal.vue";
-	import Form from "@components/Form/Form.vue";
-	import { open } from "@components/Modal/store/Modal";
+	import Button from "shared/ui/Button/Button.vue";
+	import Icon from "shared/ui/Icon/Icon.vue"
+	import Modal from "shared/ui/Modal/views/Modal.vue";
+	import Form from "shared/ui/Form/Form.vue";
+	import { open } from "shared/ui/Modal/store/Modal";
 	import useMedia from '@tools/media'
 	const { lg, sm } = useMedia()
 

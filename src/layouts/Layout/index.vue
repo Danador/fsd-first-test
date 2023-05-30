@@ -13,9 +13,9 @@
     </div>
 </template>
 <script setup>
-	import Footer from '@components/Footer/Footer.vue';
+	import Footer from 'shared/ui/Footer/Footer.vue';
 	import Header from '@widgets/Header/views/Header.vue';
-	import Loader from '@components/Loader/Loader.vue'
+	import Loader from 'shared/ui/Loader/Loader.vue'
     import lozad from 'lozad'
     import { onMounted } from 'vue'
 	import { getCategory } from '@widgets/Catalog/store/Catalog'

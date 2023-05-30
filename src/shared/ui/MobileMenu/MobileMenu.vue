@@ -61,7 +61,7 @@
 
 <script setup>
 	import vOut from '@tools/out'
-	import Icon from '@components/Icon/Icon.vue';
+	import Icon from 'shared/ui/Icon/Icon.vue';
 	import { onMounted, ref } from 'vue'
 	import { openMenu, toggleMenu } from '@widgets/Header/store/Header';
 	import { lists } from '@data/lists';

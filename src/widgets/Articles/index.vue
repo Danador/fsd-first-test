@@ -53,8 +53,8 @@
 
 <script setup>
 	import { ArticleCard } from './ui/ArticleCard'
-	import Button from '@components/Button/Button.vue'
-	import Heading from '@components/Heading/Heading.vue';
+	import Button from 'shared/ui/Button/Button.vue'
+	import Heading from 'shared/ui/Heading/Heading.vue';
 	import { Swiper, SwiperSlide } from 'swiper/vue';
 	import useMedia from '@tools/media'
 	const { lg } = useMedia()

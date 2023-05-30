@@ -44,9 +44,9 @@
 <script setup>
     import { Content, Sidebar } from '@widgets/Catalog'
 	import Viewed from '@modules/Offer/views/Viewed.vue'
-	import Icon from '@components/Icon/Icon.vue'
-	import Container from '@components/Container/Container.vue'
-	import Heading from '@components/Heading/Heading.vue'
+	import Icon from 'shared/ui/Icon/Icon.vue'
+	import Container from 'shared/ui/Container/Container.vue';
+	import Heading from 'shared/ui/Heading/Heading.vue'
 	import { getProducts } from "@modules/Products/store/Product"
 	import { ref } from 'vue'
 	import { useStore } from '@nanostores/vue'

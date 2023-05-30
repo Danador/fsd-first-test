@@ -1,3 +1,3 @@
-export * as articleModel from './model'
+export * as benefitsModel from './model'
 import Benefits from './index.vue';
 export {Benefits}

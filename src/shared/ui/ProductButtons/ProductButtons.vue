@@ -29,12 +29,12 @@
 </template>
 
 <script setup>
-	import FavoriteButton from '@components/Button/FavoriteButton.vue'
-	import Button from '@components/Button/Button.vue';
+	import FavoriteButton from 'shared/ui/Button/FavoriteButton.vue'
+	import Button from 'shared/ui/Button/Button.vue';
 	import { onMounted, computed } from 'vue';
 	import { useStore } from "@nanostores/vue";
 	import { addFavorite } from '@tools/helpers'
-	import { open } from '@components/Modal/store/Modal'
+	import { open } from 'shared/ui/Modal/store/Modal'
 	import { favoritesIds, productId } from '@widgets/Products/store/Product';
 	import useMedia from '@tools/media'
 	const { lg } = useMedia()

@@ -29,8 +29,8 @@
 </template>
 
 <script setup>
-	import Heading from '@components/Heading/Heading.vue'
-	import Breadcrumbs from '@components/Breadcrumbs/Breadcrumbs.vue';
+	import Heading from 'shared/ui/Heading/Heading.vue'
+	import Breadcrumbs from 'shared/ui/Breadcrumbs/Breadcrumbs.vue';
 	const props = defineProps({
 		title: { type: String, default: () => '' },
 		titleSmall: { type: Boolean, default: () => false },

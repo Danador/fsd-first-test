@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-	import Icon from '@components/Icon/Icon.vue'
+	import Icon from 'shared/ui/Icon/Icon.vue'
 	import { computed } from "vue";
 	const props = defineProps({
 		inputClass: { type: String, default: () => '' },

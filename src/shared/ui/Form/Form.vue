@@ -82,16 +82,16 @@
 <script setup>
 
 	//components
-	import Input from '@components/Input/Input.vue'
-	import Textarea from '@components/Textarea/Textarea.vue'
-	import Icon from '@components/Icon/Icon.vue'
-	import Button from '@components/Button/Button.vue'
+	import Input from 'shared/ui/Input/Input.vue'
+	import Textarea from 'shared/ui/Textarea/Textarea.vue'
+	import Icon from 'shared/ui/Icon/Icon.vue'
+	import Button from 'shared/ui/Button/Button.vue'
 	import Success from './Success/Success.vue'
 
 	//variables
 	import { ref, reactive, watch } from 'vue'
 	import { useStore } from '@nanostores/vue';
-	import { open } from '@components/Modal/store/Modal'
+	import { open } from 'shared/ui/Modal/store/Modal'
 	import { sendForm } from './Form'
 	import useMedia from '@tools/media'
 	const { lg } = useMedia()

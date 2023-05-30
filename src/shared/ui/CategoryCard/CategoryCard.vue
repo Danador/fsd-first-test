@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-	import Button from '@components/Button/Button.vue'
+	import Button from 'shared/ui/Button/Button.vue'
 	const props = defineProps({
 		title: { type: String, default: () => '' },
 		url: { type: String, default: () => '' }

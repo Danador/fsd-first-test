@@ -14,7 +14,7 @@
 
 <script setup>
 	import useMedia from '@tools/media'
-	import Icon from '@components/Icon/Icon.vue';
+	import Icon from 'shared/ui/Icon/Icon.vue';
 
 	const { mediaInited } = useMedia()
 </script>

@@ -34,9 +34,9 @@
 </template>
 
 <script setup>
-	import Heading from '@components/Heading/Heading.vue';
-	import Container from '@components/Container/Container.vue'
-	import Breadcrumbs from '@components/Breadcrumbs/Breadcrumbs.vue';
+	import Heading from 'shared/ui/Heading/Heading.vue';
+	import Container from 'shared/ui/Container/Container.vue';
+	import Breadcrumbs from 'shared/ui/Breadcrumbs/Breadcrumbs.vue';
 	import { marked } from 'marked';
 	import { ref } from 'vue';
 	const props = defineProps({

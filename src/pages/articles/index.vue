@@ -23,10 +23,10 @@
 </tamplate>
 <script setup>
 	import Layout from "layouts/Layout/Layout.vue";
-	import Breadcrumbs from "@components/Breadcrumbs/Breadcrumbs.vue";
-	import Container from "@components/Container/Container.vue";
+	import Breadcrumbs from "shared/ui/Breadcrumbs/Breadcrumbs.vue";
+	import Container from 'shared/ui/Container/Container.vue';
 	import ArticleCard from "@modules/Articles/components/ArticleCard/ArticleCard.vue";
-	import Heading from "@components/Heading/Heading.vue";
+	import Heading from "shared/ui/Heading/Heading.vue";
 	import articles from './module/api'
 
 	let title = 'Статьи'

@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-	import Icon from '@components/Icon/Icon.vue'
+	import Icon from 'shared/ui/Icon/Icon.vue'
 	import { getIcons } from '@tools/helpers'
 	import { onMounted, ref } from 'vue';
 

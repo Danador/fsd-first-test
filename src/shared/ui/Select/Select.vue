@@ -49,7 +49,7 @@
 
 <script setup>
 	import { computed,  ref, onMounted } from 'vue'
-	import Icon from '@components/Icon/Icon.vue'
+	import Icon from 'shared/ui/Icon/Icon.vue'
 
 	const open = ref(false)
 	const emit = defineEmits(['update:modelValue'])

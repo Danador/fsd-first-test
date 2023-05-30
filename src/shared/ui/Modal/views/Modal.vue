@@ -14,7 +14,7 @@
 
 <script setup>
 	import { useStore } from '@nanostores/vue';
-	import { open } from '@components/Modal/store/Modal'
+	import { open } from 'shared/ui/Modal/store/Modal'
 	const props = defineProps({
 		name: { type: String, default: () => '' }
 	})

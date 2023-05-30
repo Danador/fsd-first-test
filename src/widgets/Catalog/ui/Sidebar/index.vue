@@ -82,9 +82,9 @@
 
 <script setup>
 	import { onMounted, ref, watch } from 'vue'
-	import Icon from "@components/Icon/Icon.vue"
-	import Button from '@components/Button/Button.vue'
-	import Checkbox from "@components/Checkbox/Checkbox.vue"
+	import Icon from "shared/ui/Icon/Icon.vue"
+	import Button from 'shared/ui/Button/Button.vue'
+	import Checkbox from "shared/ui/Checkbox/Checkbox.vue"
 	import { getChar } from '@widgets/Products/store/Product'
 	import { useStore } from '@nanostores/vue';
 	import { filterOpen } from '@widgets/Catalog/store/Catalog'

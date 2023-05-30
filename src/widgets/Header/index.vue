@@ -215,16 +215,16 @@
 
 <script setup>
 	import { lists } from '@data/lists'
-	import Button from '@components/Button/Button.vue';
-	import Icon from '@components/Icon/Icon.vue';
+	import Button from 'shared/ui/Button/Button.vue';
+	import Icon from 'shared/ui/Icon/Icon.vue';
 	import CatalogMenu from '@widgets/CatalogMenu/views/CatalogMenu.vue';
-	import MobileMenu from '@components/MobileMenu/MobileMenu.vue';
+	import MobileMenu from 'shared/ui/MobileMenu/MobileMenu.vue';
 	import { ref, watch, computed, onMounted } from "vue"
 	import { catalogOpen, openMenu } from '@widgets/Header/store/Header'
 	import { useStore } from '@nanostores/vue';
 	import { getProducts } from "@widgets/Products/store/Product"
 	import { bodyLock, addFavorite } from '@tools/helpers'
-	import { open } from '@components/Modal/store/Modal'
+	import { open } from 'shared/ui/Modal/store/Modal'
 	import { productId, favoritesIds } from '@widgets/Products/store/Product';
 	import useMedia from '@tools/media'
 

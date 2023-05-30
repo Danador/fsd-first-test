@@ -117,14 +117,14 @@
 	import { ref, onMounted } from 'vue'
 	import { Swiper, SwiperSlide } from 'swiper/vue';
 	import { Navigation } from 'swiper';
-	import Breadcrumbs from '@components/Breadcrumbs/Breadcrumbs.vue'
-	import Modal from '@components/Modal/views/Modal.vue'
-	import Container from '@components/Container/Container.vue'
-	import Heading from '@components/Heading/Heading.vue'
-	import Icon from '@components/Icon/Icon.vue'
-	import Select from '@components/Select/Select.vue'
+	import Breadcrumbs from 'shared/ui/Breadcrumbs/Breadcrumbs.vue'
+	import Modal from 'shared/ui/Modal/views/Modal.vue'
+	import Container from 'shared/ui/Container/Container.vue';
+	import Heading from 'shared/ui/Heading/Heading.vue'
+	import Icon from 'shared/ui/Icon/Icon.vue'
+	import Select from 'shared/ui/Select/Select.vue'
 	import { useStore } from '@nanostores/vue';
-	import { open } from '@components/Modal/store/Modal'
+	import { open } from 'shared/ui/Modal/store/Modal'
 	import useMedia from '@tools/media'
 
 	const props = defineProps({

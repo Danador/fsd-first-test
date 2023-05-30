@@ -12,7 +12,7 @@
 
 <script setup>
 	import {onMounted, computed} from 'vue'
-	import Icon from '@components/Icon/Icon.vue'
+	import Icon from 'shared/ui/Icon/Icon.vue'
 	import { useStore } from '@nanostores/vue'
 	import { favoritesIds } from '@widgets/Products/store/Product';
 	import { addFavorite } from '@tools/helpers'

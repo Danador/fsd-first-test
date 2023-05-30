@@ -36,8 +36,8 @@
 </template>
 
 <script setup>
-	import Icon from '@components/Icon/Icon.vue'
-	import Container from '@components/Container/Container.vue'
+	import Icon from 'shared/ui/Icon/Icon.vue'
+	import Container from 'shared/ui/Container/Container.vue';
 	import useMedia from '@tools/media'
 	const { lg } = useMedia()
 	const props = defineProps({

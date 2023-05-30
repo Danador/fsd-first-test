@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-	import Icon from  '@components/Icon/Icon.vue'
+	import Icon from  'shared/ui/Icon/Icon.vue'
 	const props = defineProps({
 		dark: { type: Boolean, default: () => false }
 	})

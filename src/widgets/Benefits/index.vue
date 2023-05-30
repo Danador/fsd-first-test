@@ -25,8 +25,8 @@
 </template>
 
 <script setup>
-	import Icon from "@components/Icon/Icon.vue";
-	import Container from '@components/Container/Container.vue'
+	import Icon from "shared/ui/Icon/Icon.vue";
+	import Container from 'shared/ui/Container/Container.vue';
 
 	const props = defineProps({
 		dark: { type: Boolean, default: () => false },

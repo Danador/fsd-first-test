@@ -42,8 +42,8 @@
 
 <script setup>
 	import { ref } from 'vue'
-	import Icon from "@components/Icon/Icon.vue";
-	import Container from '@components/Container/Container.vue'
+	import Icon from "shared/ui/Icon/Icon.vue";
+	import Container from 'shared/ui/Container/Container.vue';
 	import { marked } from 'marked';
 
 	const props = defineProps({

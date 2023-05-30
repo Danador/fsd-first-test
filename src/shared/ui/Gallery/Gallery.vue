@@ -79,7 +79,7 @@
 	import { ref } from 'vue'
 	import { Swiper, SwiperSlide } from 'swiper/vue';
 	import { Thumbs, Pagination, Navigation } from 'swiper';
-	import Icon from '@components/Icon/Icon.vue'
+	import Icon from 'shared/ui/Icon/Icon.vue'
 	import useMedia from '@tools/media'
 	const { sm } = useMedia()
 
