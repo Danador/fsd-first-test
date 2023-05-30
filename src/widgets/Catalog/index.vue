@@ -51,7 +51,6 @@
 	import { ref } from 'vue'
 	import { useStore } from '@nanostores/vue'
 	import { bodyLock } from 'tools/helpers'
-	import { catalogModel } from 'widgets/Catalog';
 	import useMedia from 'tools/media'
 	const { lg } = useMedia()
 	const props = defineProps({

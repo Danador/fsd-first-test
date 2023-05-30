@@ -2,7 +2,7 @@
 	<Layout
 		:meta="meta"
 	>
-		<PageNotFound client:load/>
+		<PageNotFound/>
 	</Layout>
 </template>
 <script setup>

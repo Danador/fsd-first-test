@@ -1,5 +1,5 @@
 import * as qs from 'qs'
-const tokenApp = import.meta.env.APP_PRODUCTS_KEY
+// const tokenApp = import.meta.env.APP_PRODUCTS_KEY
 const appUrl = import.meta.env.PUBLIC_APP_URL
 
 export async function fetchData(url, options) {
@@ -21,7 +21,7 @@ export async function fetchData(url, options) {
 		// console.log(response);
 		return await (response).json()
 	} catch(error) {
-		// console.log('Error : ', error);
+		console.log('Error : ', error);
 		return error
 	}
 }

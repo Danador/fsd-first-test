@@ -1,7 +1,8 @@
 import Routing from './index.vue';
 
 export const routes = [
-    {path: '/', component: () => import('./first')},
+    // {path: '/', component: () => import('./first')},
+    { path: '/', component: () => import('./first') },
     // {path: '/articles', component: () => import('./articles')},
     // {path: '/catalog', component: () => import('./catalog')},
     // {path: '/certificate', component: () => import('./certificate')},

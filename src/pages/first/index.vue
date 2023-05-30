@@ -1,5 +1,4 @@
 <template>
-	<span>test span</span>
 	<Layout
 		:meta="meta"
 	>
@@ -21,7 +20,7 @@
 			:list="benefitsList"
 		/>
 		<Order/>
-
+		<Contacts/>
 	</Layout>
 </template>
 <script setup>
@@ -36,16 +35,16 @@
 	import { Benefits } from 'widgets/Benefits';
 	import { Order } from 'partials/Index/Order';
 	import { Contacts } from 'partials/Index/Contacts';
-	import { articleModel } from 'widgets/Articles';
-	import { welcomeModel } from 'widgets/Welcome';
-	import { catalogModel } from 'widgets/Catalog';
-	import { benefitsModel } from 'widgets/Benefits';
+	import { getArticles } from 'widgets/Articles/';
+	import { getIndexGallery } from 'widgets/Welcome/';
+	import { getCategory } from 'widgets/Catalog/';
+	import { getBenefits } from 'widgets/Benefits/'
 
-	let catalog = await catalogModel.getCategory()
-	const benefitsList = await benefitsModel.getBenefits()
+	let catalog = await getCategory()
+	const benefitsList = await getBenefits()
 
-	let articles = await articleModel.getArticles()
-	const indexGallery = await welcomeModel.getIndexGallery()
+	let articles = await getArticles()
+	const indexGallery = await getIndexGallery()
 
 	let title = 'Главная страница'
 	const meta={

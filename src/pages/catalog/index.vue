@@ -24,12 +24,12 @@
 </template>
 <script setup>
     import { Layout } from 'layouts/Layout';
-    import { catalogModel } from 'widgets/Catalog';
+    import { getCategory } from 'widgets/Catalog';
     import { CatalogCard } from 'partials/About/Сatalog';
     import Container from 'shared/ui/Container/Container.vue';;
     import Heading from 'shared/ui/Heading/Heading.vue';
 
-    let catalog =  await catalogModel.getCategory()
+    let catalog =  await getCategory()
 
     let title = 'Продукция'
     const meta = {

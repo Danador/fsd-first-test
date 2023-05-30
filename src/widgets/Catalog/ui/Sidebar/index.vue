@@ -86,7 +86,6 @@
 	import Button from 'shared/ui/Button/Button.vue'
 	import Checkbox from "shared/ui/Checkbox/Checkbox.vue"
 	import { useStore } from '@nanostores/vue';
-	import { catalogModel } from 'widgets/Catalog';
 	import { bodyLock } from 'tools/helpers'
 
 	const props = defineProps({
@@ -96,7 +95,7 @@
 
 	const emit = defineEmits(['update:ids', 'filter'])
 
-	const $filterOpen = useStore(catalogModel.filterOpen)
+	const $filterOpen = useStore(filterOpen)
 
 	const opener = ref([]);
 	const active = ref(false)

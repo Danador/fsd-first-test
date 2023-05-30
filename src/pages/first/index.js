@@ -1,2 +1,2 @@
-import Index from './index.vue';
-export default Index;
+import First from './index.vue';
+export default First;
