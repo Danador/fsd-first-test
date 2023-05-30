@@ -9,7 +9,7 @@
 	</Layout>
 </template>
 <script setup>
-	import { Layout } from '@layouts/Layout';
+	import { Layout } from 'layouts/Layout';
 	import IconList from "shared/ui/IconList/IconList.vue";
 	const heading = 'Список используемых иконок'
 	const meta = {

@@ -77,18 +77,18 @@
 </template>
 
 <script setup>
-	import CatalogCard from '@widgets/CatalogMenu/components/CatalogCard.vue'
+	import { CatalogCard } from 'features/CatalogMenu'
 	import { useStore } from '@nanostores/vue';
-	import { catalogOpen } from '@widgets/Header/store/Header'
+	import { headerModel } from 'widgets/Header'
 	import { ref } from 'vue';
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 
 	const props = defineProps({
 		menu: { type: Array, default: () => [] }
 	})
 
 	const { lg } = useMedia()
-	const $catalogOpen = useStore(catalogOpen)
+	const $catalogOpen = useStore(headerModel.catalogOpen)
 	const openCategory = ref(null)
 
 	const openCategories = (id) => {

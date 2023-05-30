@@ -96,7 +96,7 @@
 	import Modal from "shared/ui/Modal/views/Modal.vue";
 	import Form from "shared/ui/Form/Form.vue";
 	import { open } from "shared/ui/Modal/store/Modal";
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 	const { lg, sm } = useMedia()
 
 	const props = defineProps({

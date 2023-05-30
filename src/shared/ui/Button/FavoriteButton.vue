@@ -13,21 +13,21 @@
 <script setup>
 	import {onMounted, computed} from 'vue'
 	import Icon from 'shared/ui/Icon/Icon.vue'
-	import { useStore } from '@nanostores/vue'
-	import { favoritesIds } from '@widgets/Products/store/Product';
-	import { addFavorite } from '@tools/helpers'
+	// import { useStore } from '@nanostores/vue'
+	// import { favoritesIds } from 'widgets/Products/store/Product';
+	// import { addFavorite } from 'tools/helpers'
 
-	const props = defineProps({
-		id: {type: Number, default: () => null}
-	})
+	// const props = defineProps({
+	// 	id: {type: Number, default: () => null}
+	// })
 
-	const $favoritesIds = useStore(favoritesIds)
-	const change = computed(() => {
-		return $favoritesIds.value.includes(props.id)
-	})
-	onMounted(() => {
-		addFavorite()
-	})
+	// const $favoritesIds = useStore(favoritesIds)
+	// const change = computed(() => {
+	// 	return $favoritesIds.value.includes(props.id)
+	// })
+	// onMounted(() => {
+	// 	addFavorite()
+	// })
 
 </script>
 

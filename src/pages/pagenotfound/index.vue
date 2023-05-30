@@ -6,8 +6,8 @@
 	</Layout>
 </template>
 <script setup>
-	import { Layout } from '@layouts/Layout';
-	import PageNotFound from '@widgets/PageNotFound'
+	import { Layout } from 'layouts/Layout';
+	import PageNotFound from 'widgets/PageNotFound'
 	let title = 'Ошибка страница не найдена'
 
 	const meta = {

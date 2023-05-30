@@ -65,7 +65,7 @@
 	import { Swiper, SwiperSlide } from 'swiper/vue';
 	import { Navigation } from 'swiper';
 	import { ref} from "vue";
-	import ProductCard from "@widgets/Offer/components/ProductCard.vue"
+	import ProductCard from "widgets/Offer/components/ProductCard.vue"
 	import Container from 'shared/ui/Container/Container.vue';
 	import Icon from 'shared/ui/Icon/Icon.vue'
 	const props = defineProps({

@@ -24,7 +24,7 @@
 	</Layout>
 </template>
 <script setup>
-	import { Layout } from '@layouts/Layout';
+	import { Layout } from 'layouts/Layout';
 	import { Welcome } from 'widgets/Welcome/'
 	import { Catalog } from 'partials/About/Сatalog';
 	import { Info } from 'partials/About/Info';

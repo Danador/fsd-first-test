@@ -28,6 +28,6 @@
 <script setup>
 	import Container from "shared/ui/Container/Container.vue"
 	import Button from "shared/ui/Button/Button.vue";
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 	const { sm } = useMedia()
 </script>

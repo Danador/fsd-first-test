@@ -14,11 +14,11 @@
 </template>
 <script setup>
 	import { onBeforeMount, ref } from 'vue'
-	import { Layout } from '@layouts/Layout';
-	import { Videos, videosModel } from '@widgets/Videos'
+	import { Layout } from 'layouts/Layout';
+	import { Videos, videosModel } from 'widgets/Videos'
 	import Container from 'shared/ui/Container/Container.vue';
 	import Heading from 'shared/ui/Heading/Heading.vue'
-	import { getMedia } from '@tools/filters'
+	import { getMedia } from 'tools/filters'
 
 	let videos = ref([])
 	onBeforeMount(async () => {

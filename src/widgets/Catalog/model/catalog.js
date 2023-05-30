@@ -1,11 +1,9 @@
 import { atom } from 'nanostores'
-import { fetchData } from "@tools/api";
-import { upData, getMedia } from "@tools/filters";
-import { productFormatted } from '@widgets/Products/store/Product';
-import clone from 'node-clone-js'
+import { fetchData } from "tools/api";
+import { upData, getMedia, getMediaList } from "tools/filters";
 
 export const filterOpen = atom(false)
-
+let categoriesList = []
 // export const child = (id) => {
 // 	let ids = []
 // 	categories.forEach(item => {
@@ -29,7 +27,7 @@ export const parent = (el) => {
 		if(el.parent) {
 			ids.push(el.parent)
 		}
-		let obj = categories.find(item => item.id === el.parent.id)
+		let obj = categoriesList.find(item => item.id === el.parent.id)
 		obj && getParents(obj)
 	}
 	getParents(el)
@@ -39,10 +37,77 @@ export const parent = (el) => {
 export const slugs = (arr) => {
 	let slugList = []
 	arr.forEach(item => {
-		let slug = categories.find(i => i.id === item)
+		let slug = categoriesList.find(i => i.id === item)
 		slug !== undefined && slugList.push(slug.slug)
 	})
 	return slugList.join('/')
+}
+
+function productFormatted(array) {
+	return upData(array)
+	.map((product) => {
+		if(product.images) {
+			product.images = getMediaList(upData(product.images.data))
+		}
+		if(product.description) {
+			product.description.preview = getMedia(product.description.preview)
+		}
+		// console.log(product.features === undefined);
+		if(product.features) {
+			product.features = product.features.map((i) => {
+				i.image = getMedia(i.image)
+				return i
+			})
+		}
+		if(product.category) {
+			product.category = upData(product.category.data)
+		}
+		if (product.offers?.length) {
+			const colors = []
+			product.offers = product.offers.map((offer) => {
+				offer.images = getMediaList(upData(offer.images.data))
+				offer.characteristics = upData(offer.characteristics.data).map((char) => {
+					char.type = upData(char.type.data)
+					if (char.colorDynamic?.length) {
+						char.colorDynamic = char?.colorDynamic.map((i) => {
+							return i.color
+						})
+						char.color = char.colorDynamic[0]
+						delete char.colorDynamic
+					} else {
+						delete char.colorDynamic
+					}
+					return char
+				})
+				offer.characteristics.filter((char) => char.color).forEach((color) => {
+					colors.push({
+						id: offer.id,
+						value: color.color.color
+					})
+				})
+				return offer;
+			});
+			product.colors = colors
+		}
+		if(product.docs) {
+			product.docs = product.docs.map((doc) => {
+				doc.document = getMedia(upData(doc.document.data))
+				return doc
+			})
+		}
+		if(product.certificates?.length) {
+			product.certificates = product.certificates.map((i) => {
+				i.image = getMedia(i.image)
+				return i
+			})
+			// console.log(product.certificates);
+		}
+		if(product.buys?.data?.length) {
+			product.buys = productFormatted(product.buys.data)
+		}
+		// console.log(product.buys);
+		return product;
+	});
 }
 
 export async function getCategory(ids, options) {
@@ -63,21 +128,22 @@ export async function getCategory(ids, options) {
 		],
 	}
 	if (ids?.length) {
-		chars.filters = {
+		subcategories.filters = {
 			id: {
 				$in: ids,
 			},
 		};
 	}
 	if (options) {
-		chars.filters = {
-			...chars.filters,
+		subcategories.filters = {
+			...subcategories.filters,
 			...options,
 		};
 	}
 	const categories = await fetchData("/api/categories", {
 		urlParams: subcategories,
 	});
+	categoriesList.push(categories)
 
 	// const catBread = catalogBreadCrumbs(await fetchData("/api/categories", {
 	// 	urlParams: {

@@ -1,5 +1,5 @@
-import { fetchData } from "@tools/api";
-import { upData, getMediaList } from "@tools/filters";
+import { fetchData } from "tools/api";
+import { upData, getMediaList } from "tools/filters";
 
 export async function getIndexGallery() {
 	let dataApi = {

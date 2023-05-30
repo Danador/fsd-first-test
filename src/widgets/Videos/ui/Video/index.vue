@@ -11,7 +11,7 @@
 
 <script setup>
 	import Icon from 'shared/ui/Icon/Icon.vue'
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 	import { onMounted, ref, watch } from 'vue'
 
 	const emit = defineEmits(['click'])

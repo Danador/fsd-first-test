@@ -60,14 +60,13 @@
 </template>
 
 <script setup>
-	import vOut from '@tools/out'
 	import Icon from 'shared/ui/Icon/Icon.vue';
-	import { onMounted, ref } from 'vue'
-	import { openMenu, toggleMenu } from '@widgets/Header/store/Header';
-	import { lists } from '@data/lists';
-	import { bodyLock } from '@tools/helpers'
+	import { ref } from 'vue'
+	import { headerModel } from 'widgets/Header';
+	import { lists } from 'shared/data/lists';;
+	import { bodyLock } from 'tools/helpers'
 	import { useStore } from '@nanostores/vue';
-	const $openMenu = useStore(openMenu)
+	const $openMenu = useStore(headerModel.openMenu)
 
 	const mobileList = [
 		{

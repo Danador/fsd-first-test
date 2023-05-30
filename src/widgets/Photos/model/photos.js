@@ -1,5 +1,5 @@
-import { fetchData } from "@tools/api";
-import { upData, getUrlApi } from "@tools/filters";
+import { fetchData } from "tools/api";
+import { upData, getUrlApi } from "tools/filters";
 
 export async function getPhotos() {
 	let dataApi = {

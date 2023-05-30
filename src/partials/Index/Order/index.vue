@@ -20,7 +20,7 @@
 <script setup>
 	import Form from 'shared/ui/Form/Form.vue'
 	import Container from 'shared/ui/Container/Container.vue';
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 	const { lg } = useMedia()
 	const props = defineProps({
 		dark: { type: Boolean, default: () => false }

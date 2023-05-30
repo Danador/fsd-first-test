@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-	import { lists } from '@data/lists'
+	import { lists } from 'shared/data/lists';
 	import Icon from 'shared/ui/Icon/Icon.vue'
 	import Container from 'shared/ui/Container/Container.vue';
 	const props = defineProps({

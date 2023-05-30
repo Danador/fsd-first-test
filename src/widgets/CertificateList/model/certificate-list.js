@@ -1,5 +1,5 @@
-import { fetchData } from "@tools/api";
-import { upData, getMedia } from "@tools/filters";
+import { fetchData } from "tools/api";
+import { upData, getMedia } from "tools/filters";
 
 export async function getCertificate() {
 	let dataApi = {

@@ -14,8 +14,8 @@
 	</Layout>
 </template>
 <script setup>
-	import { Layout } from '@layouts/Layout';
-	import { CertificateList, certificateModel  } from '@widgets/CertificateList';
+	import { Layout } from 'layouts/Layout';
+	import { CertificateList, certificateModel  } from 'widgets/CertificateList';
 	import Container from 'shared/ui/Container/Container.vue';;
 	let certificates = await certificateModel.getCertificate()
 

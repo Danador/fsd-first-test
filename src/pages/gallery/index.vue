@@ -10,8 +10,8 @@
 	</Layout>
 </template>
 <script setup>
-	import { Layout } from '@layouts/Layout';
-	import { Photos, photosModel } from "@widgets/Photos";
+	import { Layout } from 'layouts/Layout';
+	import { Photos, photosModel } from "widgets/Photos";
 	let photos = await photosModel.getPhotos()
 	let title ="Фотографии нашей компании"
 

@@ -1,6 +1,6 @@
 
-import { fetchData } from "@tools/api";
-import { upData, getMedia } from "@tools/filters";
+import { fetchData } from "tools/api";
+import { upData, getMedia } from "tools/filters";
 
 async function getArticles(ids, options) {
 	let dataApi = {

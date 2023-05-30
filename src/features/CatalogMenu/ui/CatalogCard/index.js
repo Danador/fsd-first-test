@@ -1,2 +1,2 @@
-import { CatalogCard } from './index.vue'
+import CatalogCard  from './index.vue'
 export { CatalogCard }

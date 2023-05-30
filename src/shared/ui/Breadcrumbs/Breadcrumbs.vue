@@ -38,7 +38,7 @@
 <script setup>
 	import Icon from 'shared/ui/Icon/Icon.vue'
 	import Container from 'shared/ui/Container/Container.vue';
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 	const { lg } = useMedia()
 	const props = defineProps({
 		links: { type: Array, default: () => [] },

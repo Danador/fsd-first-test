@@ -85,10 +85,9 @@
 	import Icon from "shared/ui/Icon/Icon.vue"
 	import Button from 'shared/ui/Button/Button.vue'
 	import Checkbox from "shared/ui/Checkbox/Checkbox.vue"
-	import { getChar } from '@widgets/Products/store/Product'
 	import { useStore } from '@nanostores/vue';
-	import { filterOpen } from '@widgets/Catalog/store/Catalog'
-	import { bodyLock } from '@tools/helpers'
+	import { catalogModel } from 'widgets/Catalog';
+	import { bodyLock } from 'tools/helpers'
 
 	const props = defineProps({
 		chars: { type: Array, default: () => [] },
@@ -97,7 +96,7 @@
 
 	const emit = defineEmits(['update:ids', 'filter'])
 
-	const $filterOpen = useStore(filterOpen)
+	const $filterOpen = useStore(catalogModel.filterOpen)
 
 	const opener = ref([]);
 	const active = ref(false)
@@ -124,7 +123,7 @@
 </script>
 
 <script>
-import media from "@tools/media"
+import media from "tools/media"
 	export default {
 		mixins: [media]
 	}

@@ -135,7 +135,7 @@
 </template>
 <script setup>
 	import { RouterLink } from 'vue-router'
-	import { lists } from '@data/lists'
+	import { lists } from 'shared/data/lists';
 	import Icon from 'shared/ui/Icon/Icon.vue';
 	const props = defineProps({
 		productPage: { type: Boolean, default: () => false }

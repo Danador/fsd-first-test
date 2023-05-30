@@ -1,5 +1,5 @@
-import { fetchData } from "@tools/api";
-import { upData } from "@tools/filters";
+import { fetchData } from "tools/api";
+import { upData } from "tools/filters";
 
 export async function getContacts() {
 	let dataApi = {

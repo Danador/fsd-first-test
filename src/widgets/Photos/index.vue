@@ -125,7 +125,7 @@
 	import Select from 'shared/ui/Select/Select.vue'
 	import { useStore } from '@nanostores/vue';
 	import { open } from 'shared/ui/Modal/store/Modal'
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 
 	const props = defineProps({
 		list: { type: Array, default: () => null }

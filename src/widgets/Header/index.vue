@@ -214,19 +214,19 @@
 </template>
 
 <script setup>
-	import { lists } from '@data/lists'
+	import { lists } from 'shared/data/lists';
 	import Button from 'shared/ui/Button/Button.vue';
 	import Icon from 'shared/ui/Icon/Icon.vue';
-	import CatalogMenu from '@widgets/CatalogMenu/views/CatalogMenu.vue';
+	import { CatalogMenu } from 'features/CatalogMenu';
 	import MobileMenu from 'shared/ui/MobileMenu/MobileMenu.vue';
-	import { ref, watch, computed, onMounted } from "vue"
-	import { catalogOpen, openMenu } from '@widgets/Header/store/Header'
+	import { ref, watch, computed } from "vue"
+	import { headerModel } from 'widgets/Header'
 	import { useStore } from '@nanostores/vue';
-	import { getProducts } from "@widgets/Products/store/Product"
-	import { bodyLock, addFavorite } from '@tools/helpers'
+	// import { getProducts } from "widgets/Products/store/Product"
+	import { bodyLock } from 'tools/helpers'
 	import { open } from 'shared/ui/Modal/store/Modal'
-	import { productId, favoritesIds } from '@widgets/Products/store/Product';
-	import useMedia from '@tools/media'
+	// import { productId, favoritesIds } from 'widgets/Products/store/Product';
+	import useMedia from 'tools/media'
 
 	const props = defineProps({
 		productPage: { type: Boolean, default: () => false },
@@ -235,8 +235,8 @@
 
 	const { lg } = useMedia()
 	const productsId = []
-	const $catalogOpen = useStore(catalogOpen)
-	const $openMenu = useStore(openMenu)
+	const $catalogOpen = useStore(headerModel.catalogOpen)
+	const $openMenu = useStore(headerModel.openMenu)
 	const search = ref('')
 	const categoryList = ref([])
 	const noTop = ref(null)
@@ -266,7 +266,7 @@
 </script>
 
 <script>
-	import media from "@tools/media"
+	import media from "tools/media"
 	export default {
 		mixins: [media]
 	}

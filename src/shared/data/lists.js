@@ -1,8 +1,8 @@
-import { getContacts } from "@modules/Contacts/store/Contacts";
-import { getInfos } from "@tools/data"
-import { phoneMask } from "@tools/helpers";
+import { contactsModel } from "widgets/Contacts";
+import { getInfos } from "tools/data"
+import { phoneMask } from "tools/helpers";
 
-const contacts = await getContacts()
+const contacts = await contactsModel.getContacts()
 const infos = await getInfos()
 
 const list = [

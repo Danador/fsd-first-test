@@ -1,3 +1,3 @@
 import PageNotFound from './index.vue';
 
-export {PageNotFound}
+export default {PageNotFound}

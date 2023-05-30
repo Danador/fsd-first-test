@@ -17,7 +17,7 @@
 
 <script setup>
 	import Icon from 'shared/ui/Icon/Icon.vue'
-	import { getIcons } from '@tools/helpers'
+	import { getIcons } from 'tools/helpers'
 	import { onMounted, ref } from 'vue';
 
 	const icons = ref()

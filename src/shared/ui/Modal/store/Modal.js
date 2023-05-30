@@ -1,5 +1,5 @@
 import { atom } from 'nanostores';
-import { bodyLock } from '@tools/helpers'
+import { bodyLock } from 'tools/helpers'
 export const open = atom('');
 
 const modalName = open.subscribe(value => {

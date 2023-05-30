@@ -38,10 +38,10 @@
 </template>
 
 <script setup>
-	import CatalogCard from "@partials/About/Сatalog/components/CatalogCard/CatalogCard.vue";
+	import { CatalogCard } from 'partials/About/Сatalog'
 	import Container from 'shared/ui/Container/Container.vue';
 	import { Swiper, SwiperSlide } from 'swiper/vue';
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 
 	const props = defineProps({
 		list: { type: Array, default: () => null }

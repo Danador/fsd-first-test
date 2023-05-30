@@ -33,22 +33,22 @@
 	import Button from 'shared/ui/Button/Button.vue';
 	import { onMounted, computed } from 'vue';
 	import { useStore } from "@nanostores/vue";
-	import { addFavorite } from '@tools/helpers'
+	import { addFavorite } from 'tools/helpers'
 	import { open } from 'shared/ui/Modal/store/Modal'
-	import { favoritesIds, productId } from '@widgets/Products/store/Product';
-	import useMedia from '@tools/media'
+	// import { favoritesIds, productId } from 'widgets/Products/store/Product';
+	import useMedia from 'tools/media'
 	const { lg } = useMedia()
 
 	const props = defineProps({
 		id: { type: Number, required: true }
 	})
 
-	const $favoritesIds = useStore(favoritesIds)
-	const $productId = useStore(productId)
-	const change = computed(() => {
-		// console.log($favoritesIds.value.includes($productId.value));
-		return $favoritesIds.value.includes($productId.value)
-	})
+	// const $favoritesIds = useStore(favoritesIds)
+	// const $productId = useStore(productId)
+	// const change = computed(() => {
+	// 	// console.log($favoritesIds.value.includes($productId.value));
+	// 	return $favoritesIds.value.includes($productId.value)
+	// })
 
 	onMounted(() => {
 		addFavorite()

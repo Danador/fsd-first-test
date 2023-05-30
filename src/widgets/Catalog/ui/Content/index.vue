@@ -15,7 +15,6 @@
 </template>
 
 <script setup>
-	import ProductCard from "@widgets/Offer/components/ProductCard.vue";
 	const props = defineProps({
 		products: { type: Array, default: () => [] }
 	})

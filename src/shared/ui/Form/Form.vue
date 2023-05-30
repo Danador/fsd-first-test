@@ -93,7 +93,7 @@
 	import { useStore } from '@nanostores/vue';
 	import { open } from 'shared/ui/Modal/store/Modal'
 	import { sendForm } from './Form'
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 	const { lg } = useMedia()
 
 	const props = defineProps({

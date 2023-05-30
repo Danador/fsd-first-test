@@ -1,4 +1,4 @@
-import { favoritesIds } from '@modules/Products/store/Product';
+// import { favoritesIds } from 'widgets/Products/store/Product';
 
 export function getUrlSite(url) {
 	return url !== undefined ? (import.meta.env.APP_URL || 'http://localhost:3000') + url : ''
@@ -82,15 +82,15 @@ export async function getIcons() {
 	}
 }
 
-export function addFavorite(id) {
-	if(id) {
-		setStorage('favoriteProducts', id)
-	}
-	let ids = localStorage.getItem('favoriteProducts')
-	if(ids) {
-		ids = JSON.parse(ids)
-		if(Array.isArray(ids)) {
-			favoritesIds.set(ids)
-		}
-	}
-}
+// export function addFavorite(id) {
+// 	if(id) {
+// 		setStorage('favoriteProducts', id)
+// 	}
+// 	let ids = localStorage.getItem('favoriteProducts')
+// 	if(ids) {
+// 		ids = JSON.parse(ids)
+// 		if(Array.isArray(ids)) {
+// 			favoritesIds.set(ids)
+// 		}
+// 	}
+// }

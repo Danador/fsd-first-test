@@ -56,7 +56,7 @@
 	import Button from 'shared/ui/Button/Button.vue'
 	import Heading from 'shared/ui/Heading/Heading.vue';
 	import { Swiper, SwiperSlide } from 'swiper/vue';
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 	const { lg } = useMedia()
 	const props = defineProps({
 		title: { type: String, default: () => '' },

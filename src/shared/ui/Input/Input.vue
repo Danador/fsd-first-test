@@ -27,7 +27,7 @@
 
 <script setup>
 	import { computed } from 'vue'
-	import { phoneMask } from '@tools/validation'
+	import { phoneMask } from 'tools/validation'
 
 	const props = defineProps({
 		type: { type: String, default: () => 'text' },

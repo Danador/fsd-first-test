@@ -204,6 +204,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@savvywombat/tailwindcss-grid-areas@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@savvywombat/tailwindcss-grid-areas/-/tailwindcss-grid-areas-2.2.0.tgz#69a8e1af55cbb0731a74261ae406dea34e72562a"
+  integrity sha512-34zfBLygYf0IeZuIA+znFqTzRaZTH1cerAIH1YDostXks+o06CtgWqXSQVbQ7iQTt30iNoPs7R7t+xS97gongQ==
+  dependencies:
+    lodash "^4.17.21"
+
 "@simonwep/pickr@~1.8.0":
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/@simonwep/pickr/-/pickr-1.8.2.tgz#96dc86675940d7cad63d69c22083dd1cbb9797cb"

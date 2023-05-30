@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-	import useMedia from '@tools/media'
+	import useMedia from 'tools/media'
 	import Icon from 'shared/ui/Icon/Icon.vue';
 
 	const { mediaInited } = useMedia()

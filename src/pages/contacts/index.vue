@@ -9,9 +9,9 @@
 </Layout>
 </template>
 <script setup>
-	import { Layout } from '@layouts/Layout';
-	import { Contacts, contactsModel } from '@widgets/Contacts'
-	import { phoneMask } from "@tools/helpers";
+	import { Layout } from 'layouts/Layout';
+	import { Contacts, contactsModel } from 'widgets/Contacts'
+	import { phoneMask } from "tools/helpers";
 
 	const contacts = await contactsModel.getContacts()
 

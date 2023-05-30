@@ -1,5 +1,5 @@
 import { atom } from 'nanostores';
-import { bodyLock } from '@tools/helpers';
+import { bodyLock } from 'tools/helpers';
 
 export const catalogOpen = atom(false);
 

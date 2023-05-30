@@ -17,6 +17,7 @@
     "vuex": "^4.0.2",
     "@nanostores/vue": "^0.7.0",
     "@tailwindcss/typography": "^0.5.9",
+    "@savvywombat/tailwindcss-grid-areas": "^2.2.0",
     "autoprefixer": "^10.4.13",
     "lozad": "^1.16.0",
     "marked": "^4.3.0",
