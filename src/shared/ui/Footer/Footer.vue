@@ -1,19 +1,7 @@
 <template>
-
-</template>
-<script setup>
-	import { lists } from '@data/lists'
-	import Icon from '@components/Icon/Icon.vue';
-	const props = defineProps({
-		
-	})
-</script>
----
-
----
-<footer class="grid-in-footer bg-dark-7">
+	<footer class="grid-in-footer bg-dark-7">
 	<div
-		class={productPage  ? 'pt-6 pb-[90px] sm:pt-8 sm:pb-[97px] lg:py-12 grid gap-y-6 container mx-auto px-4 lg:px-5' : 'py-6 sm:py-8 lg:py-12 grid gap-y-6 container mx-auto px-4 lg:px-5'}
+		:class="productPage  ? 'pt-6 pb-[90px] sm:pt-8 sm:pb-[97px] lg:py-12 grid gap-y-6 container mx-auto px-4 lg:px-5' : 'py-6 sm:py-8 lg:py-12 grid gap-y-6 container mx-auto px-4 lg:px-5'"
 	>
 		<div class="grid sm:flex sm:justify-between w-full gap-6">
 			<!-- логотип -->
@@ -30,22 +18,31 @@
 			<!-- разделы сайта -->
 			<div class="sm:max-w-max flex flex-col gap-y-5 text-white">
 				<p class="uppercase font-bold tracking-tight">Разделы сайта</p>
-				{ lists.footer.divide.map( (item) => (
-					<a class="focus-visible:underline hover:underline outline-none focus:outline-none underline-offset-2" href={item.link}>{item.title}</a>
-				)) }
+				<RouterLink
+					v-for="item in lists.footer.divide" 
+					:key="item" 
+					class="focus-visible:underline hover:underline outline-none focus:outline-none underline-offset-2" 
+					:to="item.link"
+				>
+					{{ item.title }}
+				</RouterLink>
 			</div>
 			<!-- контакты -->
 			<div class="sm:max-w-max sm:mr-0 sm:ml-auto lg:m-0 row-start-2 sm:row-auto flex flex-col gap-y-5 text-white">
 				<p class="uppercase font-bold tracking-tight">Наши контакты</p>
-				{ lists.contacts.map( (item) => (
-					<a href={item.link} target="_blank" class="w-max focus-visible:underline hover:underline outline-none focus:outline-none underline-offset-2 text-white flex space-x-2.5 items-center">
-						<Icon
-							size="w-7 h-7"
-							name={item.icon}
-						/>
-						<span>{item.title}</span>
-					</a>
-				)) }
+				<RouterLink
+					v-for="item in list.contacts" 
+					:key="item"
+					target="_blank"
+					class="w-max focus-visible:underline hover:underline outline-none focus:outline-none underline-offset-2 text-white flex space-x-2.5 items-center" 
+					:to="item.link"
+				>
+					<Icon
+						size="w-7 h-7"
+						:name="item.icon"
+					/>
+					<span>{{item.title}}</span>
+				</RouterLink>
 				<a href="https://yandex.ru/maps/-/CCUZ4OD1LC" target="_blank" class="w-max outline-none focus:outline-none focus-visible:underline underline-offset-2 hover:underline flex text-white space-x-2.5 sm:pr-15">
 					<Icon
 						size="w-7 h-7"
@@ -60,9 +57,14 @@
 			<span class="text-white/50 block lg:text-center w-full mt-4">@ 2023 ООО “ЮГ-ОЙЛ-ПЛАСТ” - производитель поликарбоната <span class="hidden sm:contents">| Все права защищены.</span></span>
 			<!-- сервисные страницы -->
 			<div class="grid md:grid-flow-col lg:text-center gap-y-4 mt-5 sm:mt-2.5 gap-x-[5px] max-w-max lg:mx-auto text-white">
-				{lists.footer.services.map((item) => (
-					<a href={`/${item.link}`} class="focus-visible:underline hover:underline outline-none relative focus:outline-none underline-offset-2 sm:border-white/25 sm:pr-2 sm:border-r-2 sm:last:border-none" href="/privacy-policy">{item.title}</a>
-				))}
+				<RouterLink
+					v-for="item in lists.footer.services" 
+					:key="item" 
+					class="focus-visible:underline hover:underline outline-none focus:outline-none underline-offset-2" 
+					:to="item.link"
+				>
+					{{ item.title }}
+				</RouterLink>
 			</div>
 			<div class="grid lg:grid-cols-2 gap-4 lg:justify-items-start max-w-max lg:mx-auto gap-x-6 mt-2.5 text-white">
 				<div class="relative flex gap-x-1 items-center">
@@ -130,3 +132,12 @@
 		</div>
 	</div>
 </footer>
+</template>
+<script setup>
+	import { RouterLink } from 'vue-router'
+	import { lists } from '@data/lists'
+	import Icon from '@components/Icon/Icon.vue';
+	const props = defineProps({
+		productPage: { type: Boolean, default: () => false }
+	})
+</script>

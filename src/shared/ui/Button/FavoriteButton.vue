@@ -13,14 +13,14 @@
 <script setup>
 	import {onMounted, computed} from 'vue'
 	import Icon from '@components/Icon/Icon.vue'
+	import { useStore } from '@nanostores/vue'
+	import { favoritesIds } from '@widgets/Products/store/Product';
+	import { addFavorite } from '@tools/helpers'
 
 	const props = defineProps({
 		id: {type: Number, default: () => null}
 	})
 
-	import { useStore } from '@nanostores/vue'
-	import { favoritesIds } from '@widgets/Products/store/Product';
-	import { addFavorite } from '@tools/helpers'
 	const $favoritesIds = useStore(favoritesIds)
 	const change = computed(() => {
 		return $favoritesIds.value.includes(props.id)
