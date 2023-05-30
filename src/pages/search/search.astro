@@ -1,0 +1,13 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Search from "@modules/Search/views/Search.vue";
+const meta={
+	title: "Поиск",
+	description: "Поиск"
+}
+---
+<Layout meta={meta}>
+	<Search
+		client:only
+	/>
+</Layout>

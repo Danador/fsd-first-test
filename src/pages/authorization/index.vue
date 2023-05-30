@@ -11,17 +11,16 @@
                     placeholder="Пароль" 
                     type="password"
                 >
-                <RouterLink to="/profile">
+                <RouterLink :class="checkData ? '' : 'disabled'" to="/profile">
                     <button 
                         class="auth_btn"
-                        :class="checkData ? '' : 'disabled'"
                     >Авторизоваться</button>
                 </RouterLink>
             </form>
         </LayoutContent>
     </Layout>
 </template>
-<script setup lang="ts">
+<script setup>
     import {RouterLink} from 'vue-router';
     import { computed, reactive } from 'vue';
     import { Layout, LayoutContent } from 'ant-design-vue';
@@ -43,6 +42,7 @@
         gap: 20px;
     }
     input{
+        border-color: black;
         transition: all 1s ease-out;
         border-radius: 8px;
         padding: 10px;
@@ -50,7 +50,13 @@
     input:focus::placeholder{
         opacity: 0;
     }
+    a{
+        cursor: pointer;
+        transition: all 1s ease;
+    }
     .auth_btn{
+        border: none;
+        width: 100%;
         appearance: none;
         padding: 10px;
         background: blue;
@@ -59,6 +65,7 @@
         font-weight: 500;
         font-size: 18px;
         margin: 0 auto;
+        transition: all 1s ease;
     }
     .disabled {
         opacity: 50%;

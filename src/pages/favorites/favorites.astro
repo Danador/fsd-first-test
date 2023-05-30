@@ -1,0 +1,14 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Favorites from "@modules/Favorites/views/Favorites.vue";
+let title = 'Избранное'
+const meta = {
+	title: title,
+	description: title
+}
+---
+<Layout
+	meta={meta}
+>
+	<Favorites client:load />
+</Layout>

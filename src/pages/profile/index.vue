@@ -1,53 +1,74 @@
 <template>
     <Layout class="root">
         <LayoutContent class="content">
-            <ul class="wrapper">
-                <li 
-                    v-for="item in list"
-                    :key="item"
-                    class="task_res"
-                >
-                    <span class="task_res_title">{{ item.title }}</span>
-                    <span class="task_res_value">{{ item.value }}</span>
-                </li>
-            </ul>
-            <RouterLink to="/tasks">
-                <button class="complete_task">К задачам</button>
-            </RouterLink>
+            <div class="wrapper">
+                <p class="wrapper_title">Ваш результат</p>
+                <ul class="wrapper_list">
+                    <li 
+                        v-for="item in list"
+                        :key="item"
+                        class="list_task_res"
+                    >
+                        <span class="task_res_title">{{ item.title }}</span>
+                        <span class="task_res_value">{{ item.value }}</span>
+                    </li>
+                </ul>
+                <RouterLink to="/tasks">
+                    <button class="wrapper_tasks_btn">К задачам</button>
+                </RouterLink>
+                </div>
         </LayoutContent>
     </Layout>
 </template>
 <script setup lang="ts">
+    import { computed, onMounted } from 'vue';
     import { Layout, LayoutContent } from 'ant-design-vue';
+    import {taskModel} from 'entities/task';
+    import { useStore } from 'vuex';
     import {RouterLink} from 'vue-router';
+    const store = useStore()
+    const closedTask = computed(() => store.getters[taskModel.getters.filteredTasks].filter((i) => i.completed).length)
+    const openedTask = computed(() => store.getters[taskModel.getters.filteredTasks].filter((i) => !i.completed).length)
+    const getTasksListAsync = () => store.dispatch(taskModel.actions.getTasksListAsync);
+    onMounted(getTasksListAsync)
     const list = [
         {
             title: 'Выполнено задач',
-            value: 35
+            value: closedTask
         },
         {
             title: 'Осталось задач',
-            value: 88
-        },
-        {
-            title: 'Брожено задач',
-            value: 15
+            value: openedTask
         }
     ]
 </script>
 <style>
     .wrapper{
+        max-width: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .wrapper_title{
+        font-size: 24px;
+        text-align: center;
+        
+    }
+    .wrapper_list{
+        padding: 0;
+        margin: 0;
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         max-width: max-content;
     }
-    .task_res:first-child{
+    .list_task_res:first-child{
         border-radius: 8px 0 0 8px;
     }
-    .task_res:last-child{
+    .list_task_res:last-child{
         border-radius: 0 8px 8px 0;
     }
-    .task_res{
+    .list_task_res{
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -64,7 +85,12 @@
         font-weight: 700;
         font-size: 18px;
     }
-    .complete_task{
+    a{
+        width: max-content;
+        margin: 0 auto;
+    }
+    .wrapper_tasks_btn{
+        border: none;
         appearance: none;
         padding: 10px;
         border-radius: 8px;
@@ -72,7 +98,6 @@
         color: white;
         font-weight: 500;
         font-size: 18px;
-        margin: 0 auto;
     }
     .content{
         flex-direction: column;

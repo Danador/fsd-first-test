@@ -1,0 +1,63 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Welcome from '@modules/Welcome/views/Welcome.vue'
+import Catalog from '@partials/About/Сatalog/views/Catalog.vue';
+import Info from '@partials/About/Info/Info.astro';
+import History from '@partials/About/History/History.astro';
+import Trademark from '@partials/About/Trademark/Trademark.astro';
+import Mission from '@partials/About/Mission/Mission.astro';
+import Articles from '@modules/Articles/views/Articles.vue';
+import Benefits from "@modules/Benefits/views/Benefits.vue";
+import Order from '@partials/Index/Order.vue';
+import Contacts from '@partials/Index/Contacts.vue';
+import Viewed from '@modules/Offer/views/Viewed.vue';
+import { getArticles } from '@modules/Articles/store/Articles'
+import { getIndexGallery } from '@modules/Welcome/store/Welcome'
+import { getCategory } from '@modules/Catalog/store/Catalog'
+import { getMediaList, getMedia } from '@tools/filters';
+import { getBenefits } from '@modules/Benefits/store/Benefits'
+
+let catalog = await getCategory()
+const benefitsList = await getBenefits()
+
+// catalog = catalog.length ? catalog
+// 	.filter((i) => !i.parent)
+// 	.map((i) => {
+// 		i.img = getMedia(i.img)
+// 		return i
+// 	}) : []
+
+let articles = await getArticles()
+const indexGallery = await getIndexGallery()
+
+let title = 'Главная страница'
+const meta={
+	title: title,
+	description: title
+}
+---
+<Layout
+	meta={meta}
+>
+	<Welcome
+		client:load
+		list={ indexGallery ? indexGallery.images : []}
+	/>
+	<Catalog
+		list={catalog}
+		client:load
+	/>
+	<Info />
+	<History />
+	<Trademark />
+	<Mission />
+	<Articles
+		client:load
+		more={true}
+		articles={articles}
+	/>
+	<Benefits client:load dark={ false } list={benefitsList}/>
+	<Order client:load dark={ false }/>
+	<Contacts client:load dark={ false }></Contacts>
+	<Viewed client:load/>
+</Layout>
