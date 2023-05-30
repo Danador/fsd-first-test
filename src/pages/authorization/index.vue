@@ -21,7 +21,7 @@
     </Layout>
 </template>
 <script setup>
-    import {RouterLink} from 'vue-router';
+    import { RouterLink } from 'vue-router';
     import { computed, reactive } from 'vue';
     import { Layout, LayoutContent } from 'ant-design-vue';
     const test = {

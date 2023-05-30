@@ -22,8 +22,6 @@ module.exports = {
 			},
 			fontSize: {
 			},
-			borderRadius: {
-			},
 			backgroundSize: {
 			},
 			spacing: {

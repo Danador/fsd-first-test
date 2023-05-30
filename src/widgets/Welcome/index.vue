@@ -90,7 +90,7 @@
 	//components
 	import { Pagination, Navigation, Autoplay } from "swiper";
 	import { Swiper, SwiperSlide } from "swiper/vue";
-	import { ref, onMounted } from 'vue'
+	import { ref } from 'vue'
 	import Button from "shared/ui/Button/Button.vue";
 	import Icon from "shared/ui/Icon/Icon.vue"
 	import Modal from "shared/ui/Modal/views/Modal.vue";

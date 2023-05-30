@@ -44,7 +44,7 @@
 	import useMedia from 'tools/media'
 
 	const props = defineProps({
-		list: { type: Array, default: () => null }
+		list: { type: Array, default: () => [] }
 	})
 
 	// console.log(props.list);

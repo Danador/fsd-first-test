@@ -10,7 +10,7 @@
 				:class="`w-full flex flex-col space-y-2.5 first:rounded-t-2lg last:rounded-b-2lg first:lg:rounded-none last:lg:rounded-none row p-6 h-full ${ item.class }`"
 			>
 				<span class="text-Ubuntu-2lg lg:text-Ubuntu-xl font-second grid grid-rows-1a">{{ item.title }}</span>
-				<p class="text-Sans-sm sm:text-Sans-base">{{} item.description }}</p>
+				<p class="text-Sans-sm sm:text-Sans-base">{{ item.description }}</p>
 			</li>
 		</ul>
 	</Container>

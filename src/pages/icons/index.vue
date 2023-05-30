@@ -17,7 +17,3 @@
 		description: heading
 	}
 </script>
----
-
----
-

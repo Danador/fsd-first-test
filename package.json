@@ -7,30 +7,31 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "ant-design-vue": "^3.0.0-alpha.14",
-    "axios": "^0.24.0",
-    "normalizr": "^3.6.1",
-    "sass": "^1.43.4",
-    "swiper": "^9.3.2",
-    "vue": "^3.2.16",
-    "vue-router": "4",
-    "vuex": "^4.0.2",
     "@nanostores/vue": "^0.7.0",
-    "@tailwindcss/typography": "^0.5.9",
     "@savvywombat/tailwindcss-grid-areas": "^2.2.0",
+    "@tailwindcss/typography": "^0.5.9",
+    "ant-design-vue": "^3.0.0-alpha.14",
     "autoprefixer": "^10.4.13",
+    "axios": "^0.24.0",
     "lozad": "^1.16.0",
     "marked": "^4.3.0",
     "nanostores": "^0.8.1",
     "node-clone-js": "^1.1.1",
+    "normalizr": "^3.6.1",
     "postcss": "^8.4.21",
     "postcss-gap": "^1.0.0",
     "postcss-import": "^15.1.0",
     "qs": "^6.11.0",
-    "tailwindcss": "^3.2.7"
-
+    "sass": "^1.43.4",
+    "swiper": "^9.3.2",
+    "tailwindcss": "^3.2.7",
+    "update": "^0.7.4",
+    "vue": "^3.2.16",
+    "vue-router": "4",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
     "@vitejs/plugin-vue": "^1.9.3",
@@ -45,7 +46,6 @@
     "vite": "^2.6.4",
     "vite-plugin-environment": "^1.0.1",
     "vite-tsconfig-paths": "^3.3.17",
-    "vue-tsc": "^0.3.0",
-    "@tailwindcss/line-clamp": "^0.4.2"
+    "vue-tsc": "^0.3.0"
   }
 }

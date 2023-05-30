@@ -14,8 +14,8 @@
 				<Icon
 					:name = item.icon
 					:class="[
-					'w-10 h-10',
-					dark ? 'text-white' : 'text-dark-3'
+						'w-10 h-10',
+						dark ? 'text-white' : 'text-dark-3'
 					]"
 				/>
 				<p class="font-bold text-xl tracking-tight">{{ item.title }}</p>

@@ -67,7 +67,6 @@
 	const ArticleSwiper = (swiper) => {
 		swiper.value = swiper
 	}
-	// console.log(props.articles);
 </script>
 
 <style>

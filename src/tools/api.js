@@ -21,7 +21,7 @@ export async function fetchData(url, options) {
 		// console.log(response);
 		return await (response).json()
 	} catch(error) {
-		console.log('Error : ', error);
+		// console.log('Error : ', error);
 		return error
 	}
 }

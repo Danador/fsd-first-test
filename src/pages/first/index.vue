@@ -1,4 +1,5 @@
 <template>
+	<span>test span</span>
 	<Layout
 		:meta="meta"
 	>
@@ -7,29 +8,29 @@
 		/>
 		<Catalog
 			:list="catalog"
-			client:load
 		/>
-		<Info />
-		<History />
-		<Trademark />
-		<Mission />
+		<Info/>
+		<History/>
+		<Trademark/>
+		<Mission/>
 		<Articles
 			more
 			:articles="articles"
 		/>
-		<Benefits :list="benefitsList"/>
+		<Benefits 
+			:list="benefitsList"
+		/>
 		<Order/>
-		<Contacts/>
-		<Viewed/>
+
 	</Layout>
 </template>
 <script setup>
 	import { Layout } from 'layouts/Layout';
-	import { Welcome } from 'widgets/Welcome/'
+	import { Welcome } from 'widgets/Welcome/';
 	import { Catalog } from 'partials/About/Сatalog';
 	import { Info } from 'partials/About/Info';
-	import { History } from 'partials/About/History'
-	import { Trademark } from 'partials/About/Trademark'
+	import { History } from 'partials/About/History';
+	import { Trademark } from 'partials/About/Trademark';
 	import { Mission } from 'partials/About/Mission';
 	import { Articles } from 'widgets/Articles';
 	import { Benefits } from 'widgets/Benefits';
@@ -38,7 +39,7 @@
 	import { articleModel } from 'widgets/Articles';
 	import { welcomeModel } from 'widgets/Welcome';
 	import { catalogModel } from 'widgets/Catalog';
-	import { benefitsModel } from 'widgets/Benefits'
+	import { benefitsModel } from 'widgets/Benefits';
 
 	let catalog = await catalogModel.getCategory()
 	const benefitsList = await benefitsModel.getBenefits()
